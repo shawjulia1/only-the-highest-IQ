@@ -16,11 +16,13 @@ function draw(){
 }
 
 function mousePressed() {
-  if (value === 255) {
-    value = "green";
-  } else {
-    value = 255;
-  }
+  if(mouseX>=540 && mouseX<=640 && mouseY>=600 && mouseY<=650){
+   if (value === 255) {
+     value = "green";
+   } else {
+     value = 255;
+   }
+ }
 }
 
 
