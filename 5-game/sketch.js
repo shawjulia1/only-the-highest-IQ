@@ -4,9 +4,11 @@ function setup(){
 let value = 255
 function draw(){
   background("white");
+  snowglobes();
   stroke(value);
   fill("clear")
   ellipse(600,635,100);
+
 
 
   noStroke();
@@ -69,4 +71,33 @@ function fish(){
   fill("pink")
   ellipse(70,498,6);
   ellipse(70,502,6);
+}
+
+function snowglobes(){
+  stroke("grey");
+  strokeWeight(5)
+  fill("clear");
+  ellipse(600,635,150);
+  line(550,690,510,740);
+  line(650,690,690,740);
+  line(510,740,690,740);
+  ellipse(400,635,150);
+  line(350,690,310,740);
+  line(450,690,490,740);
+  line(310,740,490,740);
+  ellipse(200,635,150);
+  line(150,690,110,740);
+  line(250,690,290,740);
+  line(110,740,290,740);
+  strokeWeight(1)
+  stroke("orange")
+  fill("yellow")
+  triangle(370,670,430,670,400,590)
+  fill("red")
+  ellipse(390,650,5)
+  ellipse(410,640,5)
+  ellipse(405,618,5)
+  ellipse(400,665,5)
+  ellipse(395,630,5)
+  ellipse(415,660,5)
 }
