@@ -1,15 +1,29 @@
 function setup(){
   createCanvas(800, 800);
 }
-let value = 255
+let snowmancircle = 255
+let fishcircle = 255
+let applecircle = 255
+let bananacircle = 255
+let horseshoecircle = 255
 function draw(){
   background("white");
   snowglobes();
-  stroke(value);
+  stroke(snowmancircle);
   fill("clear")
   ellipse(600,635,100);
-
-
+  stroke(fishcircle)
+  fill("clear");
+  ellipse(120,500,120);
+  stroke(applecircle);
+  fill("clear");
+  ellipse(500,100,100);
+  stroke(bananacircle);
+  fill("clear");
+  ellipse(250,200,100);
+  stroke(horseshoecircle);
+  fill("clear");
+  ellipse(330,300,100)
 
   noStroke();
   rules();
@@ -18,15 +32,47 @@ function draw(){
 }
 
 function mousePressed() {
+  //snowman circle
   if(mouseX>=540 && mouseX<=640 && mouseY>=600 && mouseY<=650){
-   if (value === 255) {
-     value = "green";
+   if (snowmancircle === 255) {
+     snowmancircle = "green";
    } else {
-     value = 255;
+     snowmancircle = 255;
    }
  }
+ //fish circle
+  if(mouseX>=60 && mouseX<=180 && mouseY>=440 && mouseY<=560){
+    if (fishcircle === 255) {
+     fishcircle = "green";
+   } else {
+     fishcircle = 255;
+   }
+ }
+//apple circle
+  if(mouseX>=460 && mouseX<=540 && mouseY>=60 && mouseY<=140){
+   if (applecircle === 255) {
+     applecircle = "green";
+   } else {
+     applecircle = 255;
+   }
+ }
+ //banana circle
+  if(mouseX>=210 && mouseX<=290 && mouseY>=160 && mouseY<=240){
+   if (bananacircle === 255) {
+     bananacircle = "green";
+   } else {
+     bananacircle = 255;
+   }
+ }
+ //horseshoe circle
+ if(mouseX>=290 && mouseX<=370 && mouseY>=260 && mouseY<=340){
+  if (horseshoecircle === 255) {
+    horseshoecircle = "green";
+  } else {
+    horseshoecircle = 255;
+  }
 }
-
+}
 
 
 function rules(){
