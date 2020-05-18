@@ -6,6 +6,8 @@ let fishcircle = 255
 let applecircle = 255
 let bananacircle = 255
 let horseshoecircle = 255
+let cherrycircle = 255
+let teacupcircle = 255
 function draw(){
   background("white");
   snowglobes();
@@ -23,12 +25,20 @@ function draw(){
   ellipse(250,200,100);
   stroke(horseshoecircle);
   fill("clear");
-  ellipse(330,300,100)
+  ellipse(330,300,100);
+  stroke(cherrycircle);
+  fill("clear");
+  ellipse(200,650,100);
+  stroke(teacupcircle);
+  fill("clear");
+  ellipse(430,450,120);
 
   noStroke();
   rules();
   snowman();
   fish();
+  distractions();
+  //emily's drawings will go here
 }
 
 function mousePressed() {
@@ -72,8 +82,23 @@ function mousePressed() {
     horseshoecircle = 255;
   }
 }
+//cherries circle
+if(mouseX>=160 && mouseX<=240 && mouseY>=610 && mouseY<=690){
+ if (cherrycircle === 255) {
+   cherrycircle = "green";
+ } else {
+   cherrycircle = 255;
+ }
 }
-
+//teacup circle
+if(mouseX>=390 && mouseX<=470 && mouseY>=410 && mouseY<=490){
+ if (teacupcircle === 255) {
+   teacupcircle = "green";
+ } else {
+   teacupcircle = 255;
+ }
+}
+}
 
 function rules(){
   textSize(32);
@@ -146,4 +171,30 @@ function snowglobes(){
   ellipse(400,665,5)
   ellipse(395,630,5)
   ellipse(415,660,5)
+}
+
+function distractions(){
+  //orange
+  fill("orange");
+  ellipse(240,400,80);
+  strokeWeight(5);
+  stroke("green");
+  line(240,360,255,355);
+  //painting
+  stroke("grey");
+  strokeWeight(3);
+  fill("lightblue");
+  rect(450,200,100,80);
+  stroke("green");
+  line(500,280,500,255);
+  noStroke();
+  fill("yellow");
+  ellipse(500,245,7);
+  fill("lightpink");
+  ellipse(490,230,7);
+  ellipse(510,230,7);
+  ellipse(493,265,7);
+  ellipse(507,265,7);
+  ellipse(480,245,7);
+  ellipse(520,245,7);
 }
